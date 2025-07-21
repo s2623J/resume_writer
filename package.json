@@ -1,4 +1,6 @@
 {
+  "author": "David Michael",
+  "license": "MIT"
   "name": "job-doc-assistant",
   "version": "1.0.0",
   "description": "Multi-agent resume & cover letter generator with LangChainJS and Ollama",
