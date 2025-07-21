@@ -1,3 +1,10 @@
+/**
+ * Author: David Michael
+ * License: MIT
+ * Created: 2025
+ * Description: Resume & Cover Letter Generator with LLM
+ */
+
 import fs from "fs-extra";
 import path from "path";
 import 'dotenv/config';
