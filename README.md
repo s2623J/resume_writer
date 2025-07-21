@@ -133,4 +133,11 @@ This app runs entirely on your local machine. No job data or resume information 
 
 ---
 
+## 👤 Author
+
+**David Michael**  
+GitHub: [@s2623J](https://github.com/s2623J)
+Email: dm_oregon_developer@pm.me
+
+
 **Happy applying!** 🎯📄💼
