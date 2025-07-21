@@ -1,0 +1,10 @@
+
+Influencing App Behaviors and Rules:
+------------------------------------
+
+    1.  Put behavior & formatting instructions in 
+        the prompt: how to respond, style, required 
+        markers, what to avoid (e.g., no placeholders).
+    2.  Put content & evaluation rules in criteria.txt: 
+        what makes a resume/cover letter acceptable, 
+        prioritized acceptance criteria, etc.

@@ -1,0 +1,30 @@
+{
+  "name": "job-doc-assistant",
+  "version": "1.0.0",
+  "description": "Multi-agent resume & cover letter generator with LangChainJS and Ollama",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "build": "tsc",
+    "dev": "ts-node-esm src/index.ts",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@langchain/community": "^0.3.47",
+    "docx": "^9.5.1",
+    "dotenv": "^16.0.0",
+    "fs-extra": "^11.1.1",
+    "langchain": "^0.1.0",
+    "vitest": "^3.2.4"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.8.3"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "Your Name",
+  "license": "MIT"
+}
