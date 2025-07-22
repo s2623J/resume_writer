@@ -46,7 +46,8 @@ Everything runs privately on your machine — no data leaves your desktop! 🖥�
     "job_number": "123456",
     "job_title": "XXXXXXXXXX",
     "job_posting_company": "XXXXXXXXXX",
-    "job_posting_url": "XXXXXXXXXX"
+    "job_posting_url": "XXXXXXXXXX",
+    "job_posting_content": "XXXXXXXXXX"
   }
 ]
 ```
