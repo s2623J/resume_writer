@@ -6,7 +6,7 @@
  */
 
 import fs from "fs-extra";
-import path from "path";
+import path, { join } from "path";
 import 'dotenv/config';
 import { ChatOllama } from "@langchain/community/chat_models/ollama";
 import { ChatPromptTemplate } from "@langchain/core/prompts";
@@ -26,8 +26,8 @@ const baseResume = await fs.readFile("data/base_resume.txt", "utf-8");
 
 await fs.ensureDir("generated");
 
-const chatA = new ChatOllama({ model: "llama3:latest" });
-const chatB = new ChatOllama({ model: "llama3:latest" });
+const chatA = new ChatOllama({ model: "llama3.1:latest" });
+const chatB = new ChatOllama({ model: "llama3.1:latest" });
 
 const initialPromptA = ChatPromptTemplate.fromMessages([
   ChatPromptTemplate.fromTemplate(
@@ -111,6 +111,20 @@ const promptB = ChatPromptTemplate.fromMessages([
   ),
 ]);
 
+const writeNotesFile = (job: Job): string => {
+  return `
+----------------- Data set properties -----------------
+job_number: ${job.job_number}
+job_title: ${job.job_title}
+job_posting_company: ${job.job_posting_company}
+job_posting_url: ${job.job_posting_url}
+
+
+----------------- Job Posting Content -----------------
+${job.job_posting_content}
+`;
+}
+
 async function main() {
 
   const pad = (n: number) => n.toString().padStart(2, '0');
@@ -190,6 +204,7 @@ async function main() {
         // Write .txt files
         await fs.writeFile(path.join(jobDir, "resume.txt"), resumeText, "utf-8");
         await fs.writeFile(path.join(jobDir, "cover_letter.txt"), coverLetterText, "utf-8");
+        await fs.writeFile(path.join(jobDir, "notes.txt"),  writeNotesFile(job), "utf-8");
 
         // Helper to convert plain text into docx Paragraphs
         const createDocxParagraphs = (text: string) =>
